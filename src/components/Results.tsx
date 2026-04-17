@@ -87,7 +87,11 @@ const Results = () => {
                     loading="lazy"
                     width={800}
                     height={1000}
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    style={{
+                      transitionDuration: "1200ms",
+                      transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent opacity-90" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
