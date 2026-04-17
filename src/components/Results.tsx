@@ -1,22 +1,25 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
 import { X } from "lucide-react";
-import f1 from "@/assets/result-facial-1.jpg";
-import f2 from "@/assets/result-facial-2.jpg";
-import f3 from "@/assets/result-facial-3.jpg";
-import b1 from "@/assets/result-body-1.jpg";
-import b2 from "@/assets/result-body-2.jpg";
-import b3 from "@/assets/result-body-3.jpg";
+import draNatalia from "@/assets/dra-natalia.jpg";
+import clinicExperience from "@/assets/clinic-experience.jpg";
 
 type Category = "todos" | "facial" | "corporal";
 
+const gradients = [
+  "linear-gradient(135deg, #c9a96e 0%, #f5e6c8 50%, #e8c9b0 100%)",
+  "linear-gradient(135deg, #d4a5a5 0%, #f5dede 50%, #e8c0c0 100%)",
+  "linear-gradient(135deg, #a5c4d4 0%, #def0f5 50%, #c0dce8 100%)",
+  "linear-gradient(135deg, #b5a5d4 0%, #e8def5 50%, #d4c0e8 100%)",
+];
+
 const results = [
-  { id: 1, img: f1, category: "facial" as const, title: "Skinbooster + Hidratação", caption: "Pele luminosa e hidratada" },
-  { id: 2, img: f2, category: "facial" as const, title: "Harmonização Global", caption: "Contorno e proporções refinados" },
-  { id: 3, img: f3, category: "facial" as const, title: "Preenchimento Labial", caption: "Volume natural e delicado" },
-  { id: 4, img: b1, category: "corporal" as const, title: "Bioestimulador Corporal", caption: "Firmeza e qualidade de pele" },
-  { id: 5, img: b2, category: "corporal" as const, title: "Lipo Enzimática", caption: "Contorno corporal refinado" },
-  { id: 6, img: b3, category: "corporal" as const, title: "Tratamento Postural", caption: "Silhueta harmônica e elegante" },
+  { id: 1, img: draNatalia, category: "facial" as const, title: "Skinbooster + Hidratação", caption: "Pele luminosa e hidratada" },
+  { id: 2, img: clinicExperience, category: "facial" as const, title: "Harmonização Global", caption: "Contorno e proporções refinados" },
+  { id: 3, img: draNatalia, category: "facial" as const, title: "Preenchimento Labial", caption: "Volume natural e delicado" },
+  { id: 4, img: clinicExperience, category: "corporal" as const, title: "Bioestimulador Corporal", caption: "Firmeza e qualidade de pele" },
+  { id: 5, img: draNatalia, category: "corporal" as const, title: "Lipo Enzimática", caption: "Contorno corporal refinado" },
+  { id: 6, img: clinicExperience, category: "corporal" as const, title: "Tratamento Postural", caption: "Silhueta harmônica e elegante" },
 ];
 
 const filters: { key: Category; label: string }[] = [
