@@ -4,8 +4,8 @@ const CTA = () => {
   return (
     <section id="contato" className="py-24 md:py-32 bg-ink text-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold/30 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-rose/20 blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold/30 blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-rose/20 blur-3xl animate-float-slow" />
       </div>
 
       <div className="container mx-auto relative">

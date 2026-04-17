@@ -13,27 +13,27 @@ const Authority = () => {
     <section id="sobre" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          <Reveal>
+          <Reveal variant="left">
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
+              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant img-zoom-hover">
                 <img
                   src={draNatalia}
                   alt="Dra. Natália Silvestrin"
-                  className="w-full h-full object-cover scale-105"
+                  className="w-full h-full object-cover scale-105 animate-ken-burns"
                   loading="lazy"
                   width={800}
                   height={1000}
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 border border-gold hidden md:block" />
-              <div className="absolute -top-6 -left-6 bg-background px-6 py-5 shadow-soft hidden md:block">
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 border border-gold hidden md:block animate-pulse-soft" />
+              <div className="absolute -top-6 -left-6 bg-background px-6 py-5 shadow-soft hidden md:block animate-float-slow">
                 <div className="font-serif-display text-3xl text-gold leading-none">+2k</div>
                 <div className="mt-1 text-[10px] tracking-luxe uppercase text-foreground/60">Atendimentos</div>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={120} variant="right">
             <div>
               <span className="gold-divider text-[11px] tracking-luxe uppercase text-gold">
                 Sobre a profissional

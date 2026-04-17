@@ -43,13 +43,14 @@ const Testimonials = () => {
 
         <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
           {items.map((t, i) => (
-            <Reveal key={t.name} delay={i * 80}>
-              <figure className="relative bg-muted/40 border border-border p-8 md:p-10 hover-lift transition-all duration-500">
-                <Quote className="text-gold/60 absolute top-6 right-6" size={32} strokeWidth={1} />
-                <blockquote className="font-serif-display text-xl md:text-2xl text-ink leading-relaxed italic">
+            <Reveal key={t.name} delay={i * 120} variant={i % 2 === 0 ? "left" : "right"}>
+              <figure className="relative bg-muted/40 border border-border p-8 md:p-10 hover-lift transition-all duration-700 group overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-champagne/0 to-champagne/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <Quote className="text-gold/60 absolute top-6 right-6 transition-all duration-700 group-hover:scale-110 group-hover:text-gold" size={32} strokeWidth={1} />
+                <blockquote className="font-serif-display text-xl md:text-2xl text-ink leading-relaxed italic relative">
                   "{t.text}"
                 </blockquote>
-                <figcaption className="mt-8 pt-6 border-t border-border/70">
+                <figcaption className="mt-8 pt-6 border-t border-border/70 relative">
                   <div className="font-medium text-sm text-ink">{t.name}</div>
                   <div className="text-xs text-foreground/55 tracking-refined uppercase mt-1">
                     {t.role}

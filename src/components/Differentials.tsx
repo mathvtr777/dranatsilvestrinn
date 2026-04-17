@@ -30,10 +30,11 @@ const Differentials = () => {
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border/60">
           {items.slice(0, 4).map((it, i) => (
-            <Reveal key={it.title} delay={i * 60}>
-              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-colors duration-500 group">
-                <it.icon className="text-gold transition-transform duration-500 group-hover:scale-110" size={28} strokeWidth={1} />
-                <h3 className="mt-6 font-serif-display text-2xl text-ink">{it.title}</h3>
+            <Reveal key={it.title} delay={i * 90} variant="up">
+              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-all duration-700 group relative overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                <it.icon className="text-gold transition-all duration-700 group-hover:scale-125 group-hover:rotate-6" size={28} strokeWidth={1} />
+                <h3 className="mt-6 font-serif-display text-2xl text-ink transition-transform duration-500 group-hover:translate-x-1">{it.title}</h3>
                 <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
               </div>
             </Reveal>
@@ -42,10 +43,11 @@ const Differentials = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 mt-px">
           {items.slice(4).map((it, i) => (
-            <Reveal key={it.title} delay={i * 60}>
-              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-colors duration-500 group">
-                <it.icon className="text-gold transition-transform duration-500 group-hover:scale-110" size={28} strokeWidth={1} />
-                <h3 className="mt-6 font-serif-display text-2xl text-ink">{it.title}</h3>
+            <Reveal key={it.title} delay={i * 90} variant="up">
+              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-all duration-700 group relative overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                <it.icon className="text-gold transition-all duration-700 group-hover:scale-125 group-hover:rotate-6" size={28} strokeWidth={1} />
+                <h3 className="mt-6 font-serif-display text-2xl text-ink transition-transform duration-500 group-hover:translate-x-1">{it.title}</h3>
                 <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
               </div>
             </Reveal>
