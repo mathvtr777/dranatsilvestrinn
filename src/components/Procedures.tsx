@@ -18,11 +18,12 @@ const corporal = [
 ];
 
 const Card = ({ name, desc, benefit }: { name: string; desc: string; benefit: string }) => (
-  <div className="group relative bg-card border border-border p-7 md:p-8 hover-lift transition-all duration-500">
-    <div className="absolute top-0 left-0 w-12 h-px bg-gold transition-all duration-500 group-hover:w-24" />
-    <h4 className="font-serif-display text-2xl text-ink mt-3">{name}</h4>
-    <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{desc}</p>
-    <div className="mt-6 pt-5 border-t border-border/70">
+  <div className="group relative bg-card border border-border p-7 md:p-8 hover-lift transition-all duration-700 overflow-hidden">
+    <div className="absolute top-0 left-0 w-12 h-px bg-gold transition-all duration-700 group-hover:w-full" />
+    <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+    <h4 className="font-serif-display text-2xl text-ink mt-3 relative transition-transform duration-500 group-hover:translate-x-1">{name}</h4>
+    <p className="mt-3 text-sm text-foreground/65 leading-relaxed relative">{desc}</p>
+    <div className="mt-6 pt-5 border-t border-border/70 relative">
       <div className="text-[10px] tracking-luxe uppercase text-foreground/50">Principal benefício</div>
       <div className="mt-1 text-sm text-gold font-medium">{benefit}</div>
     </div>
@@ -68,7 +69,7 @@ const Procedures = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facial.map((p, i) => (
-              <Reveal key={p.name} delay={i * 60}>
+              <Reveal key={p.name} delay={i * 90} variant="up">
                 <Card {...p} />
               </Reveal>
             ))}
@@ -93,7 +94,7 @@ const Procedures = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {corporal.map((p, i) => (
-              <Reveal key={p.name} delay={i * 60}>
+              <Reveal key={p.name} delay={i * 90} variant="scale">
                 <Card {...p} />
               </Reveal>
             ))}
